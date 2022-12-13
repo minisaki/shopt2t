@@ -1,0 +1,41 @@
+.uti-margin-bottom {
+    margin-bottom: 3rem;
+}
+.uti-margin-bottom-small {
+    margin-bottom: 1.2rem;
+}
+.uti-margin-top {
+  margin-top: 3rem;
+}
+.uti-margin-top--small {
+  margin-top: 1.5rem;
+}
+.uti-text-center {
+  text-align: center;
+}
+.uti-align-center {
+  align-items: center;
+}
+.uti-margin-right {
+  margin-right: 2rem;
+}
+.uti-width-100 {
+  width: 100%;
+}
+.uti-width-50 {
+  width: 50%;
+}
+.uti-product-amination {
+    &:nth-child(2n+1) {
+      animation: flyToBottomShow .5s;
+    }
+    &:nth-child(2n) {
+      animation: flyToRightUpShow .5s;
+    }
+  }
+  .uti-color-red {
+    color: $color-red !important;
+  }
+  .uti-color-white {
+    color: $color-white !important;
+  }

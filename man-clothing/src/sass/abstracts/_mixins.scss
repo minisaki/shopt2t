@@ -1,0 +1,28 @@
+/*
+media query su dung em vi query phu thuoc vao font-size trinh duyet, mac dinh la 16px
+phone: < 600px: < 37.5em
+tablet-port: < 900px: 56.25em
+tablet-land: < 1200px: 75em
+big-destop: >1800px: 112.5em
+*/
+
+@mixin reponsive($breakpoint) {    
+    @if $breakpoint == sm-phone {
+        @media (max-width: 480px) {@content};
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 740px) {@content};
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 900px) {@content};
+    }
+    @if $breakpoint == tablet-land {
+        @media (max-width: 1050px) {@content};
+    }
+    @if $breakpoint == sm-desktop {
+        @media (max-width: 1200px) {@content};
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {@content};    
+    }
+}

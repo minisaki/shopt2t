@@ -1,0 +1,92 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+
+.sidebar {
+  &__search {
+    position: relative;
+    margin-bottom: 3rem;
+    &-icon {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      font-size: 1.8rem;
+      color: $color-black;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    &-icon, &-icon::before {
+      font-family: "linea-basic-10" !important;
+    }
+    &-input {
+      width: 100%;
+      padding: 1rem 3rem 1rem 1.2rem;
+      outline: none;
+      border: 1px solid $color-gray-light-2;
+      font-size: $default-font-size;
+      &::placeholder {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__icon {
+    font-size: 2rem;
+    color: $color-black;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__body {
+    padding-right: 2rem;    
+    transition: all .3s;
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      display: block;
+      max-height: 50rem;
+    }
+  }
+  &__list {
+    list-style: none;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-gray-light-2;
+  }
+  &__item {
+    padding: .5rem 0;
+    transition: all .3s;
+    cursor: pointer;
+    &:hover {
+      transform: translateX(.5rem);
+    }
+    &.active .sidebar__link {
+      color: $color-black;
+      
+    }
+  }
+  &__link,
+  &__link:link,
+  &__link:visited {
+    font-size: $default-font-size;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $color-gray-dark;
+    transition: all .3s;
+    &:hover {
+      color: $color-black;
+    }
+
+  }
+}
+.sidebar-responsive {
+  @include reponsive(tablet) {
+    padding-top: 5rem;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

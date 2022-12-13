@@ -1,0 +1,9 @@
+@import '../../../../../sass/abstracts/mixins';
+
+.section-news {
+    text-align: center;
+    padding: 5rem 0;
+    @include reponsive(tablet) {
+        padding: 1rem 0;
+    }
+}

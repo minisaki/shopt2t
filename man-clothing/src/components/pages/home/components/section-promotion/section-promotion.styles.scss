@@ -1,0 +1,68 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+
+.section-promotion{    
+  background-color: $color-gray-light-1;
+}
+
+.promotion {
+  position: relative;
+  padding: 10rem 0;
+  @include reponsive(tablet) {
+    padding: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14%;
+    height: 40%;
+    background-color: $color-white;
+    @include reponsive (tablet) {
+      left: 0;
+      top: 20%;
+      width: 30%;
+      height: 20%;
+    }
+    @include reponsive(phone) {
+      left: 0;
+      top: 15%;
+      width: 25%;
+      height: 20%;
+    }
+    @include reponsive (sm-phone) {
+      top: 14%;
+      height: 18%;
+    }
+    
+  }
+}
+.col-3-responsive {
+  @include reponsive(tablet) {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 50rem;
+  }
+  @include reponsive(sm-phone) {
+    height: 36rem;
+  }
+}
+.col-5-responsive {
+  @include reponsive(tablet) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 5rem;
+  }
+}
+.col-4-responsive {
+  @include reponsive(tablet) {
+    flex: 0 0 80%;
+    max-width: 100%;
+    text-align: center;
+    padding-bottom: 5rem;
+    margin: 0 auto;
+  }
+}

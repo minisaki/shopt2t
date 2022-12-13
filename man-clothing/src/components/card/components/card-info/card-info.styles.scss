@@ -1,0 +1,43 @@
+@import '../../../../sass/abstracts/arivarbles';
+
+.card {
+  &__info {
+    margin-top: 1.6rem;
+    padding: 0 1rem;
+  }
+  &__start {    
+    & .cart__start-item {
+      font-size: 1.5rem;
+      display: inline-block;    
+    }
+    &-icon.active,
+    &-icon.active::before {
+      background-color: $color-secondary-dark !important;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: $color-secondary-dark;
+    }
+    &-icon, 
+    &-icon::before {
+      font-family: "linea-basic-10" !important;
+    }
+
+  }
+  &__price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &-root {
+      font-size: 1.4rem;
+      color: $color-secondary;
+      font-weight: 200;
+      text-decoration: line-through;
+    }
+    &-discount {
+      font-size: 1.8rem;
+      color: $color-secondary-dark;
+      font-weight: 600;
+      margin-right: 2rem;
+    }
+  }
+}

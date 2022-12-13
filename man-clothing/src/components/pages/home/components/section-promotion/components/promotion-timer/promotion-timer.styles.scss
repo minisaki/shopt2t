@@ -1,0 +1,20 @@
+@import '../../../../../../../sass/abstracts/arivarbles';
+
+.promotion {
+  &__timers {
+    padding-left: 2rem;
+  }
+  &__price {
+    margin-bottom: 2rem;
+    .price-root {
+      text-decoration: line-through;
+      font-size: 2rem;
+    }
+    .price-discount {
+      font-size: 3rem;
+      font-weight: 600;
+      color: $color-red;
+      margin-left: 2rem;
+    }
+  }
+}

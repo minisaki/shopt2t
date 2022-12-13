@@ -1,0 +1,22 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+
+.section-preview {
+  padding: 10rem 0;
+  @include reponsive(tablet) {
+    padding: 0;
+  }
+}
+.col-preview-wrap {
+  @include reponsive(tablet) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.col-preview-aside {
+  @include reponsive(tablet) {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    margin: 0 auto;
+  }
+}

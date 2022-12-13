@@ -1,0 +1,77 @@
+@import '../../../sass/abstracts/arivarbles';
+@import '../../../sass/abstracts/mixins';
+
+.checkout {
+  padding: 5rem 0;
+  &__header {
+    border-bottom: 1px solid $color-gray-light-2;
+  }
+  &__form {
+    padding-right: 6rem;
+    @include reponsive(tablet) {
+      padding-right: 0;
+    }
+  }
+  &__aside {
+    background-color: $color-gray-light-1;
+    padding: 2rem;
+    .aside__total {
+      background-color: unset;
+    }    
+  }
+  &__list {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $color-gray-light-2;
+  }
+  & &__list &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+  &__title {
+    font-size: $default-font-size;
+    text-transform: capitalize;
+  }
+  &__price {
+    font-size: $default-font-size;
+    text-transform: capitalize;
+    color: $color-black;
+  }
+  &__total.aside__total {
+    margin: 0;
+    padding: 0;
+    padding-top: 2rem;
+    .aside__name {
+      color: $color-black;
+    }
+  }
+}
+
+.product-detail {
+  background-color: $color-gray-light-2;
+  padding: 2rem 0;
+}
+.product-infor {
+  padding: 2rem 0;
+}
+.section-related {
+  padding: 2rem 0;
+}
+
+.checkout-left-responsive {
+  @include reponsive(tablet) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.checkout-right-responsive {
+  @include reponsive(tablet) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 5rem;
+  }
+}
+.checkout-reverse {
+  flex-wrap: wrap-reverse;
+}

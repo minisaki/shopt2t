@@ -1,0 +1,32 @@
+@import '../abstracts/arivarbles';
+
+body {
+    font-weight: 400;
+    font-family:  "Nunito", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    color: $color-gray-dark;    
+}
+
+
+.heading-sixth {
+    font-size: 2rem;
+    color: $color-gray-light-1;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.footer__text {
+    font-size: 1.4rem;
+    color: $color-gray-light-1;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 0 0 1rem 0;
+    
+}
+.sidebar__heading {
+    font-size: 2rem;
+    color: $color-black;
+    font-weight: 400;
+    text-transform: uppercase;
+}

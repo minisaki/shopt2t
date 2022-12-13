@@ -1,0 +1,17 @@
+@import '../../../sass/abstracts/arivarbles';
+
+.product-detail {
+  background-color: $color-gray-light-2;
+  padding: 2rem 0;
+}
+
+.product-infor {
+  padding: 2rem 0;
+}
+.product__mid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 25rem;
+}

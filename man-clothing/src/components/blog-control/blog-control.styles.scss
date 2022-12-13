@@ -1,0 +1,19 @@
+@import '../../sass/abstracts/arivarbles';
+.control { 
+  &__wraper {
+    cursor: pointer;
+    border: 1px solid $color-gray-light-2;
+    &--previous {
+      text-align: left;
+    }
+    &--next {
+      text-align: right;
+    }
+    padding: 2rem;
+  }
+
+  &__next, &__previous {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+  }
+}

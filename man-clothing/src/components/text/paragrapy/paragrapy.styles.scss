@@ -1,0 +1,10 @@
+@import '../../../sass/abstracts/arivarbles';
+
+.heading-paragrapy {
+  font-size: $default-font-size;
+  color: $color-gray-dark-3;
+  animation: up-to .9s .2s;
+}
+.heading-paragrapy img{
+  width: 100%;
+}

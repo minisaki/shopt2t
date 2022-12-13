@@ -1,0 +1,30 @@
+@import '../../sass/abstracts/arivarbles';
+@import '../../sass/abstracts/mixins';
+
+.filter {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5rem 6rem;
+  @include reponsive (tablet) {
+    width: 100%;
+    padding: 0rem 2rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+  }
+  @include reponsive (sm-phone) {
+    margin-top: 0rem;
+  }
+
+  &__list {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 2rem 3rem;
+      @include reponsive (phone) {
+        width: 100%;
+        padding: 0;
+      }
+  }
+  
+}

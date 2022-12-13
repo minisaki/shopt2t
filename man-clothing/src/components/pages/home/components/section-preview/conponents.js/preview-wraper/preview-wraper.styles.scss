@@ -1,0 +1,22 @@
+@import '../../../../../../../sass/abstracts/mixins';
+
+.preview {
+  &__wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    transition: all .3s;
+    @include reponsive(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;  
+    }
+    &:hover {
+      gap: 5px;
+    }
+    &:hover .preview__img:not(:hover) {
+      transform: scale(.90);
+      z-index: -1;
+    }
+  }
+}

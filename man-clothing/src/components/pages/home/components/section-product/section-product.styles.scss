@@ -1,0 +1,69 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+.section-products {
+  padding: 10rem 0;    
+}
+.cart {
+  &__support {
+    position: absolute;
+    top: 2rem;
+    right: -2rem;
+    opacity: 0;
+    transition: all .5s;
+  }
+  &__item {
+    padding: .8rem 1.2rem;
+    background-color: $color-white;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+  }
+  &__icon, &__icon::before {
+    font-family: "linea-basic-10" !important;
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+    
+  }
+  
+  &__info {
+    margin-top: 1.6rem;
+  }
+  &__start {    
+    & .cart__start-item {
+      font-size: 1.5rem;
+      display: inline-block;    
+    }
+    &-icon.active,
+    &-icon.active::before {
+      background-color: $color-secondary-dark !important;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: $color-secondary-dark;
+    }
+    &-icon, 
+    &-icon::before {
+      font-family: "linea-basic-10" !important;
+    }
+
+  }
+  &__price {
+    font-size: 1.8rem;
+    color: $color-black;
+    font-weight: 600;
+  }
+  &__responsive {
+    @include reponsive(sm-desktop) {
+      flex: 0 0 33.33333%;
+      max-width: 33.33333%;
+    }
+    @include reponsive(phone) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @include reponsive(sm-phone) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}

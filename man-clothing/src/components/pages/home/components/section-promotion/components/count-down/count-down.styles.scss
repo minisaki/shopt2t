@@ -1,0 +1,33 @@
+@import '../../../../../../../sass/abstracts/arivarbles';
+
+.countdown {
+  &__number {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      font-size: 3rem;
+      color: $color-black;
+      font-weight: 600;
+      flex: 1;
+      position: relative;
+      &:not(:last-child)::after {
+        content: ":";
+        position: absolute;
+        top: 50%;
+        right: 25%;
+        transform: translate(-50%, -50%);
+        color: $color-gray-dark-3;
+      }
+    }
+  }
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+      font-size: 1.6rem;
+      color: $color-gray-dark-3;
+      text-transform: capitalize;
+      flex: 1;
+    }
+  }
+}

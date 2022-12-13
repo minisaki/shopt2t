@@ -1,0 +1,25 @@
+@import '../../../../../sass/abstracts/mixins';
+@import '../../../../../sass/abstracts/arivarbles';
+
+.hero {
+  position: relative;
+  height: 72rem;  
+  [class*="__btn"] {
+      position: absolute;
+      top: 50%;
+      border-radius: 50%;
+      z-index: 20;
+      @include reponsive (phone) {
+        top: 70%;
+      }
+      // @include reponsive (sm-phone) {
+      //   top: 60%;
+      // }
+  }
+  &__btn-right {        
+      left: 5rem;       
+  }
+  &__btn-left {
+      right: 5rem;
+  }
+}

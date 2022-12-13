@@ -1,0 +1,30 @@
+@import '../../../../../../../sass/abstracts/arivarbles';
+@import '../../../../../../../sass/abstracts/mixins';
+.preview {
+  [class*="__img-"] {
+    overflow: hidden;
+    transition: all .3s;
+    outline-offset: 5px;
+    border-radius: 5px;      
+    @include reponsive (phone) {
+      outline-offset: 1px;
+      width: 80%;
+    }
+    &:hover {
+      transform: scale(1.1);
+      z-index: 100;
+      outline: 3px solid $color-primary;
+      @include reponsive (phone) {
+        outline-width: 1px;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    transition: transform .3s;
+    // @include reponsive (phone) {
+    //   width: 80%;
+    // }
+  }
+}

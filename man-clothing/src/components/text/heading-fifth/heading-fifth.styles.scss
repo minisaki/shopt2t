@@ -1,0 +1,16 @@
+@import '../../../sass/abstracts/arivarbles';
+@import '../../../sass/abstracts/mixins';
+
+.heading-fifth {
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: $color-gray-dark;
+  text-transform: capitalize;
+  @include reponsive(tablet-land) {
+    font-size: 1.6rem;
+  }
+  @include reponsive(phone) {
+    font-size: 1.4rem;
+  }
+}

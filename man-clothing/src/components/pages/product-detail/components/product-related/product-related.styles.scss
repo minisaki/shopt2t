@@ -1,0 +1,12 @@
+@import '../../../../../sass/abstracts/mixins';
+
+.cart-responsive {
+  @include reponsive (tablet-land) {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  @include reponsive (phone) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../../../../sass/abstracts/mixins';
+
+.section-banner {
+  padding: 10rem;
+  @include reponsive(tablet) {
+    padding: 0;
+  }
+  @include reponsive(tablet) {
+    padding: 0 2rem;
+    padding-top: 10rem;
+  }
+}

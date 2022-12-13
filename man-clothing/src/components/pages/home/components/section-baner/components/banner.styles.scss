@@ -1,0 +1,132 @@
+@import '../../../../../../sass/abstracts/arivarbles';
+@import '../../../../../../sass/abstracts/mixins';
+
+.banner {
+  display: flex;
+  position: relative;  
+  cursor: pointer;
+  @include reponsive(sm-phone) {
+    margin-bottom: 10rem;
+  }
+  &--1 {
+      transform: translate(0rem, 12rem);
+      @include reponsive(sm-desktop) {
+        transform: translate(3rem, 5rem);
+      }
+      @include reponsive (tablet) {
+        transform: translate(3rem, 0rem);
+      }
+      @include reponsive  (phone) {
+        transform: translate(0rem, 0rem);
+      }
+      @include reponsive(sm-phone) {
+        transform: unset;
+      }
+  }
+  &--2 {
+      transform: translate(0rem, -5rem);
+      @include reponsive(tablet-port) {
+        transform: translate(-4rem, 6rem);
+      }
+      @include reponsive(medium-desktop) {
+        transform: translate(-4rem, 6rem);
+      }
+      @include reponsive(sm-phone) {
+        transform: unset;
+      }
+  }
+  &--3 {
+      transform: translate(8rem, 26rem);
+      @include reponsive(sm-desktop) {
+        transform: translate(8rem, 22rem);
+      }
+      @include reponsive (tablet) {
+        transform: translate(4rem, 18rem);
+      }
+      @include reponsive (phone) {
+        transform: translate(0rem, 18rem);
+      }
+      @include reponsive(sm-phone) {
+        transform: unset;
+      }
+  }
+  &__text {
+      position: absolute;
+      top: 50%;
+      left: -50%;
+      width: 100%;
+      margin: 1rem 0;
+      transform: translateY(-50%);
+      
+      &.banner__text--1 {
+        @include reponsive (tablet) {
+          left: -100%;
+          width: 100%;
+        }
+        @include reponsive(sm-phone) {
+          top: 100%;
+          width: 100%;
+          left: 0;
+          transform: unset;
+          text-align: center;
+        }
+      }
+
+      &.banner__text--2 {
+          top: 112%;
+          left: 0;
+          width: 100%;
+          @include reponsive (phone) {
+            top: 112%;
+            left: 0;
+            width: 108%;
+          }
+          @include reponsive(sm-phone) {
+            top: 100%;
+            width: 100%;
+            left: 0;
+            transform: unset;
+            text-align: center;
+          }
+      }
+      &.banner__text--3 {
+        top: -25%;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include reponsive(tablet) {
+          top: -32%;          
+        }
+        @include reponsive(sm-phone) {
+          top: 100%;
+          width: 100%;
+          left: 0;
+          transform: unset;
+          text-align: center;
+        }
+      }
+      
+  }
+  &:hover .btn-out-line::before {
+    width: 50%;
+    background-color: $color-red;
+    }
+  &__img-box {
+      width: 100%;
+      max-width: 50rem;
+      border-radius: .3rem;
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+  &__responsive {
+    @include reponsive(sm-phone) {
+      margin-left: 0;
+      flex: 0 0 100%;
+      max-width: 100%;
+      transform: unset;
+    }
+
+  }
+}

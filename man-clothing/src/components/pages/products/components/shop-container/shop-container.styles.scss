@@ -1,0 +1,49 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+
+.shop-container {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  &__title {
+    font-size: 1.4rem;
+    color: $color-black;
+    font-weight: 200;
+    text-transform: capitalize;
+  }
+  &__sort {
+    &-option {
+      font-family: inherit;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+  }
+}
+.shop-responsive {
+  @include reponsive (tablet) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 5rem;
+  }
+}
+.card-responsive {
+  @include reponsive (tablet) {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  @include reponsive (phone) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @include reponsive (sm-phone) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
