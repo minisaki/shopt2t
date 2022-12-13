@@ -1,0 +1,93 @@
+@import '../../../sass/abstracts/arivarbles';
+@import '../../../sass/abstracts/mixins';
+
+.header {
+  width: 100%;
+  box-shadow: 0 1rem 4rem rgba($color-black, .2);
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  background-color: $color-black;
+  &__nav {
+    @include reponsive(tablet) {
+      display: none;
+    }
+  }
+  &__search {
+    @include reponsive(tablet) {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%;
+    }
+   
+  }
+  &__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include reponsive(tablet) {
+      flex: 0 0 16.6667%;
+      max-width: 16.6667%;
+      justify-content: center;
+
+    }
+    
+  }
+  &__cart {
+    @include reponsive(tablet) {
+      flex: 0 0 16.6667%;
+      max-width: 16.6667%;
+    }
+    
+  }
+}
+.menu-phone {
+  align-self: center;
+  cursor: pointer;
+  @include reponsive(tablet) {
+    display: block;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+}
+.menu__icon-box {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 1.5%;
+  right: 5%;
+  border-radius: 50%;
+  transition: all .3s;
+  z-index: 60;
+  @include reponsive (phone) {
+    top: 1.5%;
+    right: 3%;
+  }
+  &.active {
+    background-color: $color-white;
+  }
+  &.active + .menu-modal__background {
+    transform: scale(80);
+  }
+  &.active ~ .menu-modal__container {
+    left: 50%;
+  }
+  &.active ~ .menu-modal__container .nav__link {
+    opacity: 1;
+  }
+}
+.menu__icon {
+  font-size: 3rem;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .3s .4s;
+  color: $color-white;
+  &--close {
+    color: $color-khaki-dark;
+  }
+  &.active {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,48 @@
+.skeleton {
+  width: 50%;
+  height: 1rem;
+  margin: 2rem;
+  background-image: linear-gradient( to right, rgba(black, .2) 0, rgba(black, .2) 40%, rgba(white,1) 50%, rgba(black, .2) 60%, rgba(black, .2) 100%);
+  background-size: 200% 100%;
+  border-radius: 5rem;
+  animation:  loader-50 2s linear infinite;
+  &__big {
+    height: 25rem;
+    background-image: linear-gradient( to right, rgba(black, .2) 0, rgba(black, .2) 20%, rgba(black,.1) 50%, rgba(black, .2) 80%, rgba(black, .2) 100%);
+    animation:  loader-50 2.5s linear infinite;
+    border-radius: 3px;
+  }
+  &__medium {
+    height: 5rem;
+  }
+  &__small {
+    height: 1rem;
+    animation:  loader-100 1.5s ease-in infinite;
+  }
+  &__full {
+    width: 100%;
+  }
+  &__fast {
+    animation-duration: 1s;
+  }
+  &__slow {
+    animation-duration: 1.5s;
+  }
+}
+@keyframes loader-50 {
+  to {
+    background-position: -50% 0;
+  }
+  from {
+    background-position: 150% 0;
+  }
+}
+
+@keyframes loader-100 {
+  to {
+    background-position: -100% 0;
+  }
+  from {
+    background-position: 100% 0;
+  }
+}

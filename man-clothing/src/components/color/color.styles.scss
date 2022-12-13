@@ -1,0 +1,44 @@
+@import '../../sass/abstracts/arivarbles';
+@import '../../sass/abstracts/mixins';
+
+.color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include reponsive(sm-desktop) {
+    justify-content: flex-start;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin: 1rem 1.5rem 1rem 0;
+    cursor: pointer;
+    &.active .color__input{
+      border: 2px solid $color-primary-light;
+    }
+  }
+  &__input {
+    // -webkit-appearance: none;
+    border: .6px solid $color-gray-dark-2;
+    border-radius: 100px;
+    width: 3rem;
+    height: 3rem;
+    padding: .2rem;
+    &::-webkit-color-swatch {
+      border: none;
+      border-radius: 50%;
+      padding: .2rem;
+    }
+    &::-webkit-color-swatch-wrapper {
+      border: none;
+      border-radius: 50%;
+      padding: .2rem;
+    }
+    &:hover {
+      border: 1px solid $color-primary-light;
+    }
+  }
+}

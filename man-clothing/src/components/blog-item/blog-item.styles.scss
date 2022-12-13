@@ -1,0 +1,62 @@
+@import '../../sass/abstracts/arivarbles';
+@import '../../sass/abstracts/mixins';
+
+.news {
+  width: 100%;
+  height: 45rem;
+  max-height: 45rem;
+  &:hover .news__info{
+    box-shadow: 0 .5rem 2rem rgba($color-black, .1);
+  }
+  &:hover .btn-out-line::before{
+    width: 50%;
+    background-color: $color-red;
+  }
+  &__img-box {
+    width: 95%;
+    height: 27rem;
+    max-height: 36rem;
+    margin: 0 auto;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__info {
+    background-color: $color-white;
+    width: 70%;
+    margin: 0 auto;
+    transform: translateY(-2.5rem);
+    padding: 2rem;
+    text-align: left;
+    transition: all .3s;
+  }
+  &__time {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__icon,
+    &__icon::before {
+      font-family: "linea-basic-10" !important;
+      
+    }
+    &__text {
+      margin-left: 1rem;
+      font-size: 1.2rem;
+    }
+
+  }
+
+}
+.news-respponsive {
+  @include reponsive(tablet) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @include reponsive(sm-phone) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

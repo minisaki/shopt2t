@@ -1,0 +1,13 @@
+@import '../../../../sass/abstracts/arivarbles';
+
+.view {
+  &__container {  
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 1rem;
+  }
+  &__text {
+    font-size: 1.2rem;
+  }
+
+}

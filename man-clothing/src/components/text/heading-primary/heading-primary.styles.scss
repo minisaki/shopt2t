@@ -1,0 +1,10 @@
+@import '../../../sass/abstracts/arivarbles';
+
+.heading-primary {
+  font-size: 5rem;
+  color: $color-black;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1;
+  animation: up-to .7s .1s;
+}

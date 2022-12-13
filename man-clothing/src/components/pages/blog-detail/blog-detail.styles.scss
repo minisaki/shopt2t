@@ -1,0 +1,123 @@
+@import '../../../sass/abstracts/arivarbles';
+@import '../../../sass/abstracts/mixins';
+
+.blog-detail {
+  &__header {
+    background-image: linear-gradient(to bottom right, $color-primary, $color-secondary);
+    padding: 10rem;
+    text-align: center;
+    @include reponsive(sm-phone) {
+      padding: 10rem 0;
+    }
+    & > h2 {
+      padding: 3rem;
+      max-width: 50%;
+      margin: 0 auto;
+      color: $color-white;
+      @include reponsive (tablet-land) {
+        max-width: 70%;
+      }
+      @include reponsive (phone) {
+        max-width: 100%;
+        padding: 2rem;
+      }
+    }
+  }
+  &__img-box {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    height: 40rem;
+    max-height: 40rem;
+  }
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+  }
+  &__author {
+    display: flex;
+    padding-bottom: 5rem;
+    font-size: 2rem;
+    color: $color-white;
+    list-style: none;
+    justify-content: center;
+  }
+  &__name {
+    padding: 0 2rem;
+    position: relative;
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 60%;
+      top: 0;
+      right: 0;
+      transform: translateY(30%);
+      background-color: $color-white;
+    }
+  }
+  &__container {
+    transform: translateY(-10rem);
+  }
+  &__content {
+    max-width: 60%;
+    margin: 0 auto;   
+    padding: 5rem 0;
+    @include reponsive(sm-desktop) {
+      max-width: 80%;
+    }
+    @include reponsive(tablet) {
+      max-width: 100%;
+    }
+    & > article {
+      padding: 4rem 0;
+      
+    }
+  }
+  &__content img {
+    width: 100%;
+  }
+  &__footer {
+    border-top: 1px solid $color-gray-light-2;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__user {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-img {
+      border-radius: 100px;
+      margin-right: 1rem;
+    }
+    &-name {
+      font-size: 1.8rem;
+      color: $color-black;
+      font-weight: 600;
+      text-transform: capitalize;
+      @include reponsive(phone) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  &__tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: $color-black;
+    font-weight: 600;
+    text-transform: capitalize;
+    & .tag {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+article .img {
+  width: 100%;
+}

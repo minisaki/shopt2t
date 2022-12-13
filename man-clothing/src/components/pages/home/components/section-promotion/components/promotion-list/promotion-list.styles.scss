@@ -1,0 +1,30 @@
+@import '../../../../../../../sass/abstracts/arivarbles';
+@import '../../../../../../../sass/abstracts/mixins';
+
+.promotion {
+  &__list {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    @include reponsive(tablet) {
+      left: 20%;
+    }
+    
+  }
+  &__item {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    & .heading-fifth {
+      font-weight: 400;
+      color: $color-gray-dark-2;
+    }
+    &.active .heading-fifth {
+      color: $color-black;
+      font-weight: 600;
+    }
+  }
+}

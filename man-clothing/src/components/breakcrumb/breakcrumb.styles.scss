@@ -1,0 +1,40 @@
+@import '../../sass/abstracts/arivarbles';
+
+.breakcrumb {
+  margin: 1.5rem 0;
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  &__item {
+    padding: 1rem 1.2rem;
+    font-size: 1.8rem;
+    position: relative;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .3s;
+    &:not(:last-child) {
+      color: $color-text-dark;
+      &:hover {
+        color: $color-pink-1;
+      }
+      &:hover::before {
+        color: $color-text-dark;
+      }
+    }
+    &:not(:last-child)::before {
+      content: "\003E";
+      position: absolute;
+      right: -20%;
+      width: 2rem;
+      height: 2rem;
+    }
+    &:last-child {
+      pointer-events: none;
+      color: $color-gray-dark-2;
+      user-select: none;
+    }
+  }
+}

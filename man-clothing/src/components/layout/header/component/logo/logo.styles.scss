@@ -1,0 +1,12 @@
+.logo {
+  &__link {
+      display: inline-block;
+      border-radius: 100px;
+      padding: 2rem;
+      -webkit-tap-highlight-color: transparent;
+  }
+  &__img {
+      width: 4rem;
+      border-radius: 100px;
+  }
+}

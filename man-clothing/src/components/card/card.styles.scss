@@ -1,0 +1,29 @@
+@import '../../sass/abstracts/arivarbles';
+
+.card {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: block;
+  transition: all .3s;
+  // &:hover .btn-cart {
+  //   transform: translateY(-5rem);
+  //   background-color: $color-white;
+  //   opacity: 1;
+  //   z-index: 10;
+  // }
+  // &:hover .cart__support {
+  //   top: 2rem;
+  //   right: 6.5%;
+  //   opacity: 1;
+  // }
+  // &:hover .heading-fourth {
+  //   opacity: 0;
+  // }
+  &:hover {
+    cursor: pointer;
+    // box-shadow: 0 10px 20px $color-grey-dark-2;
+    box-shadow: 0 .5rem 2rem rgba($color-black, .1);
+    transform: translateY(-4px);
+  }
+}

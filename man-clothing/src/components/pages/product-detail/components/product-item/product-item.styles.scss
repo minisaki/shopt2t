@@ -1,0 +1,99 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+.product {
+  &__thumbs {
+    list-style: none; 
+    @include reponsive(phone) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  &__thumb {
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 1rem;
+    
+    &-img {
+      width: 80px;
+      height: auto;
+      outline-offset: -2px;
+      object-fit: cover;
+      outline: 1px solid #ffffff;
+      border: 1px solid transparent;
+      transition: all .7s;
+      @include reponsive(sm-phone) {
+        width: 80%;
+      }
+      &:hover {
+        border: 1px solid $color-pink;
+      }
+      &.active {
+        border: 1px solid $color-pink;
+      }
+    }
+    &:last-child {
+      position: relative;
+    }
+    &:last-child::before {
+      content: "\00bb";
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__big {
+    position: relative;
+    height: 100%;
+    @include reponsive(phone) {
+      position: static;
+      height: unset;
+      display: flex;
+    }
+  }
+  &__big-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: all .3s ease-in;
+    cursor: zoom-in;
+    @include reponsive(phone) {
+      position: static;
+      display: none;
+    }
+    &.active {
+      opacity: 1;
+      @include reponsive(phone) {
+        width: 100%;
+        display: block;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2rem 0;
+        max-height: 70rem;
+      }
+      @include reponsive(sm-phone) {
+        width: 80%;
+      }
+    }
+  }
+}
+.row-reverse {
+  @include reponsive (phone) {
+    flex-wrap: wrap-reverse;
+  }
+}
+.product-item-left-responsive {
+  @include reponsive (phone) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+}
+.product-item-right-responsive {
+  @include reponsive (phone) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,112 @@
+@import '../../../sass/abstracts/arivarbles';
+@import '../../../sass/abstracts/mixins';
+
+
+.footer {
+  background-color: $color-black;
+  padding: 5rem 0;
+}
+.footer {
+  &__payment {
+
+  }
+  &__info {
+    display: flex;
+    @include reponsive(sm-phone) {
+      flex-wrap: wrap;
+    }
+  }
+  &__shop {
+    display: flex;
+    &--60 {
+      flex: 60%;
+      padding: 0 6rem;
+      @include reponsive(phone) {
+        padding: 0;
+      }
+      @include reponsive(sm-phone) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 1rem;        
+        margin-bottom: 2rem;
+      }
+    }
+    &--40 {
+      flex: 40%;
+      @include reponsive(sm-phone) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+    }
+  }
+  &__widget {
+    flex: 50%;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__customer {
+    padding: 0 6rem 0 0;
+    & .customer {
+      margin-top: 3rem;
+      border-bottom: 2px solid $color-white;
+      padding-bottom: 1rem;
+      position: relative;
+      &__input {
+        border: none;
+        background-color: $color-black;
+        outline: none;
+        padding: .5rem 1rem;
+        color: $color-gray-dark;
+        font-size: 1.6rem;
+        width: 90%;
+        &::-webkit-input-placeholder {
+          color: $color-gray-dark;
+          text-transform: capitalize;
+          font-size: 1.6rem;
+        }
+      }
+      &__icon {
+        color: $color-white;
+        font-size: 2.5rem;
+        position: absolute;
+        top: .2rem;
+        right: 0;
+        &::before {
+          font-family: "linea-basic-10" !important;
+          padding: 1rem 0;
+
+        }
+      }
+    }  
+    
+  }
+
+}
+.copyright {
+  text-align: center;
+  width: 100%;
+  margin-top: 8rem;
+  border-top: 1px solid $color-white;
+  & > p {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 0 2rem;
+  }
+}
+.col.footer-left-responsive {
+  @include reponsive(phone) {
+    flex: 0 0 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+}
+.col.footer-right-responsive {
+  @include reponsive(phone) {
+    flex: 0 0 100%;
+    max-width: 100%
+  }
+}

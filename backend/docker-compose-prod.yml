@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  dbshop:
+    image: postgres:11
+    environment:
+      - NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - shopt2t_data:/var/lib/t2tshop/data/
+  web:
+    build: .
+    command: gunicorn backend_clothing.wsgi -b 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    environment:
+      - ENVIRONMENT=production
+      - SECRET_KEY=django-insecure-_ef2tlrmrgxy2xxcc1o^=_kxyi%=h6)x71kbbm)%r5cxf8wjxv
+      - DEBUG=1
+      - NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    depends_on:
+      - dbshop  
+
+volumes:
+  shopt2t_data:

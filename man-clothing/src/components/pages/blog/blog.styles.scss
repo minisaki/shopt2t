@@ -1,0 +1,15 @@
+@import '../../../sass/abstracts/arivarbles';
+
+
+.blog-header {
+  background-image: url('../../../../public/image/bg/breadcrumb-bg.jpg');
+  object-fit: cover;
+  & > h1 {
+    padding: 15rem;
+    text-align: center;
+    color: $color-white;
+  }
+}
+.blog-details {
+  margin-top: 5rem;
+}

@@ -1,0 +1,72 @@
+@import '../../../sass/abstracts/arivarbles';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .8);
+  }
+  
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+  &__icon {
+    font-size: 3rem;
+    color: $color-white;
+    margin: auto;
+    transition: all .5s;
+  }
+  &__right, &__left {
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+    transition: all .5s;
+    z-index: 2000;
+    border-radius: 50%;
+    &:hover {
+      background-color: $color-gray-light-2;
+    }
+    &:hover > .modal__icon {
+      color: $color-black;
+    }
+  }
+  &__right {
+    position: absolute;
+    top: 50%;
+    right: -10rem;
+  }
+  &__left {
+    position: absolute;
+    top: 50%;
+    left: -10rem;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    transition: transform .3s;
+  }
+  &__img-wrap {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../../sass/abstracts/arivarbles';
+
+
+.heading-teriary {
+  font-size: 1.8rem;
+  color: $color-pink;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  animation: up-to .5s;
+}

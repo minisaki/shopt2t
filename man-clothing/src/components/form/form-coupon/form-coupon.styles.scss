@@ -1,0 +1,43 @@
+@import '../../../sass/abstracts/arivarbles';
+
+.coupon {
+  display: flex;
+  margin: 2rem 0; 
+  position: relative;  
+  &__input {
+    flex: 1;
+    outline: none;
+    border: 1px solid $color-gray-light-2;
+    padding: 1.2rem;
+    min-width: 10rem;
+    font-size: $default-font-size;
+    
+    &::placeholder {
+      text-transform: capitalize;
+      color: $color-gray-dark-2;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    top: 50%;
+    right: 42%;    
+    font-size: 2rem;
+    color: $color-primary;
+    animation: loader-spin 3s infinite linear;
+  }
+  & .btn {
+    padding: 0;
+    min-width: 10rem;
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes loader-spin {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}

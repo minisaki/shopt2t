@@ -1,0 +1,51 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+
+.description {
+  margin-bottom: 2rem;
+  &__header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $color-gray-light-2;
+  }
+  &__tab {
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all .4s;
+    @include reponsive (sm-phone) {
+      width: 33%;
+      max-height: 33%;
+    }
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+    &.active {
+      // border-bottom-color: $color-red;
+    }
+    &:hover {
+      border-bottom-color: $color-red;
+      border-bottom-width: 1px;
+
+    }
+  }
+  &__content {
+    padding: 2rem 15rem;
+    @include reponsive (sm-desktop) {
+      padding: 2rem 10rem;
+    }
+    @include reponsive (tablet-land) {
+      padding: 2rem 5rem;
+    }
+    @include reponsive(tablet) {
+      padding: 2rem 2rem;
+    }
+  }
+  &__heading {
+    font-size: 1.8rem;    
+    font-weight: 500;
+    color: $color-black;
+  }
+}

@@ -1,0 +1,32 @@
+@import '../../../../../sass/abstracts/arivarbles';
+@import '../../../../../sass/abstracts/mixins';
+
+.col {
+  &--1 {
+    @include reponsive(tablet-land) {
+      flex: 0 0 58.33333%;
+      max-width: 58.33333%;
+    }
+  }
+  &--2 {
+    @include reponsive(tablet-land) {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%;
+    }
+    
+  }
+  &--3 {
+    @include reponsive(tablet-land) {
+      flex: 0 0 16.66667%;
+      max-width: 16.66667%;
+    }
+    
+  }
+  &--4 {
+    @include reponsive(tablet-land) {
+      flex: 0 0 8.33333%;
+      max-width: 8.33333%;
+    }
+    
+  }
+}

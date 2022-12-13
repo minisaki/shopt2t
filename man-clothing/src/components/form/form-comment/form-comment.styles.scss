@@ -1,0 +1,34 @@
+@import '../../sass/abstracts/arivarbles';
+.comment {
+  text-align: center;
+  &__form {
+    padding: 2rem 0;
+  }
+  &__form &__wraper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
+  &__input, &__text {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 1px solid $color-grey-light-2;
+    font-size: $default-font-size;
+    outline: none;
+    &::placeholder {
+      font-size: 1.4rem;
+      text-transform: capitalize;
+    }
+    &:focus {
+      border-color: $color-grey-dark;
+    }
+  }
+  &__input {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  &__text {
+    margin: 2rem 0;
+  }
+}

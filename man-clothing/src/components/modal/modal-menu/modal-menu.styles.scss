@@ -1,0 +1,26 @@
+@import '../../../sass/abstracts/arivarbles';
+@import '../../../sass/abstracts/mixins';
+
+.menu-modal {
+
+  &__background {
+    position: fixed;
+    top: 1.5rem;
+    right: 4.5rem;
+    width: 6rem;
+    height: 6rem;
+    background-image: radial-gradient($color-primary-light, $color-primary);
+    border-radius: 50%;
+    z-index: 50;
+    transform: scale(0);
+    transition: all .3s;
+  }
+  &__container {
+    position: fixed;
+    top: 40%;
+    left: -100%;
+    transform: translate(-50%, -50%);
+    z-index: 70;
+    transition: left 1s cubic-bezier(0.67, 0.29, 0.03, 1.4);
+  }
+}
